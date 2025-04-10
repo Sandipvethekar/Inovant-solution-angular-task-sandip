@@ -1,0 +1,89 @@
+.login-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://visitkland.com/assets/images/login-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-heading {
+    font-family: IvyPresto-Regular;
+    font-size: 18px;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 450px;
+}
+
+.input-box {
+    width: 100%;
+    border-radius: .375rem;
+    border: 1px solid rgba(220, 220, 220, 1);
+    background-color: rgba(248, 248, 248, 1);
+    padding: .625rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: rgb(17 17 17);
+    position: relative;
+    padding-right: 35px;
+}
+
+.login-button {
+    width: 100%;
+    cursor: pointer;
+    border-radius: .375rem;
+    background-color: rgb(26, 144, 139);
+    padding: .75rem 1rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-password {
+    text-align: end;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.create-account p a {
+    color: rgb(26, 144, 139);
+}
+
+.forgot-password a {
+    color: black;
+}
+
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.text-danger {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}

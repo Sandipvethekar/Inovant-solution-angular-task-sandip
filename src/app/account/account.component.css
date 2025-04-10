@@ -1,0 +1,188 @@
+.card {
+    border: none;
+
+}
+
+.form-control-plaintext {
+    padding: 0.375rem 0;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    padding-left: 0.75rem;
+}
+
+footer {
+    padding: 2rem 0;
+    border-top: 1px solid #dee2e6;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.account-header {
+
+    background-color: rgb(26, 144, 139);
+    min-height: 400px;
+}
+
+.sub-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu i {
+    font-size: 50px;
+}
+
+.para {
+    width: 480px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.account-container {
+    width: 100%;
+}
+
+.user-info-container {
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    gap: 30px;
+    transform: translateX(-50%) translateY(-50%);
+
+    background-color: white;
+    z-index: 9999;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.user-128 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.main-container {
+    display: flex;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+/* profile-menu.component.css */
+.profile-menu-container {
+    min-width: 300px;
+    height: max-content;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+}
+
+.list-group {
+    width: 100%;
+}
+
+.list-group-item {
+    border: none;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.list-group-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.text-success {
+    color: rgb(26, 144, 139) !important;
+}
+
+.text-danger {
+    color: red !important;
+}
+
+.text-danger:hover {
+    color: #bb2d3b !important;
+}
+
+.personal-info-card {
+    width: 100%;
+}
+
+.user-form-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-form {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.Save-btn {
+    background-color: rgb(26, 144, 139);
+    color: white;
+}
+
+.footer {
+    background-color: rgb(26, 144, 139);
+}
+
+.list-unstyled li a {
+    color: white;
+}
+
+.footer-container {
+    text-align: center;
+}
+
+.footer-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Copyright-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Copyright-sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

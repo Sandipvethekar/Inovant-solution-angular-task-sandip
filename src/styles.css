@@ -1,0 +1,29 @@
+/* Global styles */
+:root {
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+<div class="login-container">
+    <div class="alin-item-center justify-content-center">
+        <div class="col-md-12 col-lg-12">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="text-center mb-4">
+                    <img src="assets/logo.png" alt="image" width="104" height="60" class="mb-4">
+                    <h2 class="h4 mb-3 login-heading">ENTER YOUR EMAIL TO CONTINUE</h2>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control input-box" formControlName="email" placeholder="Email">
+                    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-danger">
+                        Please enter a valid email address
+                    </div>
+                </div>
+
+                <div class="mb-3 position-relative">
+                    <input [type]="passwordVisible ? 'text' : 'password'" class="form-control input-box"
+                        formControlName="password" placeholder="Password">
+                    <button type="button" class="password-toggle-btn" (click)="togglePasswordVisibility()">
+                        <i class="bi" [ngClass]="passwordVisible ? 'bi-eye-slash' : 'bi-eye'"></i>
+                    </button>
+                    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+                        class="text-danger">
+                        Please enter your password
+                    </div>
+                </div>
+
+                <div class="forgot-password">
+                    <a routerLink="/forgot-password" class="text-decoration-none alin-item-end">Forgot password?</a>
+                </div>
+
+                <div>
+                    <button type="submit" class="login-button" [disabled]="!loginForm.valid">
+                        Login
+                    </button>
+                </div>
+
+                <div class="text-center create-account">
+                    <p class="mt-3">Don't have an account? <a routerLink="/register">Create Account</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

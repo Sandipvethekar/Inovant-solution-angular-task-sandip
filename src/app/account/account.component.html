@@ -1,0 +1,165 @@
+<div class="account-container">
+    <div class="account-header ">
+        <div class="container sub-container">
+            <div> <img src="assets/logo.png" alt="image" width="120" height="80" class="mb-4"></div>
+            <div class="para">
+                <h1 class="mb-4 text-white">MY ACCOUNT</h1>
+                <p class="lead mb-4 text-white ">Manage Your Fun: View Tickets, Book Zones, and Track Your Adventure!
+                </p>
+
+            </div>
+            <div class="menu">
+                <i class="bi bi-list text-white "></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="user-info-container">
+        <div class="container user-info mb-4">
+            <div class="user-128">
+                <img src="assets/user-128.svg" alt="image" width="100" height="100">
+            </div>
+            <div>
+                <h5 class="mb-2">{{ user.first_name }}</h5>
+                <p class="mb-1">{{ user.phone }}</p>
+                <p>{{ user.email }}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="main-container container ">
+        <div class="profile-menu-container">
+            <div class="list-group">
+                <a routerLink="/edit-profile" class="list-group-item list-group-item-action text-success">
+                    <i class="bi bi-pencil-square me-2"></i>Edit Profile
+                </a>
+                <a routerLink="/faqs" class="list-group-item list-group-item-action">
+                    <i class="bi bi-question-circle me-2"></i>FAQS
+                </a>
+                <a routerLink="/contact-us" class="list-group-item list-group-item-action">
+                    <i class="bi bi-envelope me-2"></i>Contact Us
+                </a>
+                <a routerLink="/delete-account" class="list-group-item list-group-item-action">
+                    <i class="bi bi-trash me-2"></i>Delete Account
+                </a>
+                <a routerLink="/logout" (click)="logout()" class="list-group-item list-group-item-action text-danger">
+                    <i class="bi bi-box-arrow-right me-2"></i>Logout
+                </a>
+            </div>
+
+        </div>
+        <div class="card personal-info-card mb-4">
+            <div class="card-body">
+                <h2 class="card-title mb-4">PERSONAL INFORMATION</h2>
+                <div class="user-form-container">
+                    <div class="user-form">
+                        <img src="assets/user-128.svg" alt="image" width="100" height="100">
+                    </div>
+                    <div>
+                        <h5 class="mb-2">{{ user.first_name }}</h5>
+                        <p class="mb-1">{{ user.phone }}</p>
+                        <p>{{ user.email }}</p>
+                    </div>
+                </div>
+                <div class="row mb-3 mt-4">
+                    <div class="col-md-6">
+                        <label class="form-label">First Name</label>
+                        <input type="text" value="{{user.first_name}}" class="form-control mb-2">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" value="{{user.last_name}}" class="form-control mb-2">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Email Address</label>
+                        <input type="text" value="{{user.email}}" class="form-control mb-2">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Phone Number</label>
+                        <input type="text" value="{{user.phone_code}}|{{user.phone}}" class="form-control mb-2">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6 position-relative">
+                        <label class="form-label">Old Password</label>
+                        <input [type]="passwordVisible ? 'text' : 'password'" class="form-control mb-2"
+                            placeholder="Enter your current password">
+                        <button type="button" class="password-toggle-btn" (click)="togglePasswordVisibility()">
+                            <i class="bi" [ngClass]="passwordVisible ? 'bi-eye-slash' : 'bi-eye'"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <label class="form-label">New Password</label>
+                        <input [type]="newpasswordVisible ? 'text' : 'password'" class="form-control mb-2"
+                            placeholder="Enter your new password">
+                        <button type="button" class="password-toggle-btn" (click)="newtogglePasswordVisibility()">
+                            <i class="bi" [ngClass]="newpasswordVisible ? 'bi-eye-slash' : 'bi-eye'"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 position-relative">
+                        <label class="form-label">Confirm New Password</label>
+                        <input [type]="confirmpasswordVisible ? 'text' : 'password'" class="form-control"
+                            placeholder="Confirm your new password">
+                        <button type="button" class="password-toggle-btn" (click)="confirmtogglePasswordVisibility()">
+                            <i class="bi" [ngClass]="confirmpasswordVisible ? 'bi-eye-slash' : 'bi-eye'"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-end mt-4">
+                    <button class="btn form-control Save-btn">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container footer-main-container">
+            <div class="col-md-6 footer-container">
+                <div>
+                    <h3 class="mb-3 text-white">Quick links</h3>
+                    <ul class="list-unstyled">
+                        <div class="footer-items">
+                            <li><a href="#" class="text-decoration-none">Press </a></li>
+                            <li><a href="#" class="text-decoration-none"> FAQS</a></li>
+                        </div>
+                        <div class="footer-items">
+                            <li><a href="#" class="text-decoration-none">About us</a></li>
+                            <li><a href="#" class="text-decoration-none">Contact us</a></li>
+                        </div>
+                        <div class="footer-items">
+                            <li><a href="#" class="text-decoration-none">Terms & conditions</a></li>
+                            <li><a href="#" class="text-decoration-none">Join our Team</a></li>
+                        </div>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-12 mt-5 Copyright-container">
+                <div class="Copyright-sub-container">
+                    <p><a href="#" class="text-decoration-none text-white">PRIVACY POLICY</a></p>
+                    <p class="text-white">Copyright © 2024 K-Land. </p>
+                    <p class="text-white">All Rights Reserved.</p>
+                </div>
+                <div class="mt-3 Copyright-sub-container ">
+                    <h5 class="me-3 text-white">FOLLOW US</h5>
+                    <img src="assets/instagram.png" alt="image" width="70" height="60">
+                </div>
+                <div class=" Copyright-sub-container">
+                    <h5 class="me-3 text-white">Presented By</h5>
+                    <img src="assets/logo.png" alt="image" width="100p" height="60">
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
