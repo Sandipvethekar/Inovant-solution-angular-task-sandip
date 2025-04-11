@@ -40,7 +40,20 @@ footer {
     width: 480px;
     text-align: center;
     margin-top: 40px;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+.para-label {
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(26, 144, 139), #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
 
 .account-container {
     width: 100%;
